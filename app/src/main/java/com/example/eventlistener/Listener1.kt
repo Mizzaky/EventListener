@@ -47,14 +47,16 @@ class Listener1 : AppCompatActivity(), View.OnClickListener {
             btn3.setOnClickListener(this)
             btn4.setOnClickListener(this)
         }
-    override fun onClick(v: View?) {
-        //safe operator (?) >> aksesnya menggunakan if/when
-        when (v?.id) {//isis variabel v ini adalah id. onClick >> id >> Button
-            R.id.btn3 -> {//ketika button 3 diklik maka menjalankan apa
-                Toast.makeText(this, "tombol 3 sudah diklik", Toast.LENGTH_LONG).show()
-            }
-            R.id.btn4 -> {
-                Toast.makeText(this, "tombol 4 sudah diklik", Toast.LENGTH_LONG).show()
+        override fun onClick(v: View?) {
+            //safe operator (?) >> aksesnya menggunakan if/when
+            when (v?.id) {//isis variabel v ini adalah id. onClick >> id >> Button
+                R.id.btn3 -> {//ketika button 3 diklik maka menjalankan apa
+                    Toast.makeText(this, "tombol 3 sudah diklik", Toast.LENGTH_LONG).show()
+                }
+
+                R.id.btn4 -> {
+                    Toast.makeText(this, "tombol 4 sudah diklik", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }
